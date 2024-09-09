@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="388.02" tests="15" skipped="0" failures="2" errors="0">
+<testcase classname="Add New Employee with login details" name="Add a new employee with proper login details" time="20.083">
+<system-out><![CDATA[
+Given User is on login page.................................................passed
+When User enters username "Admin"...........................................passed
+And User enters password "admin123".........................................passed
+And Click on Login button...................................................passed
+Then User should be on the dashboard page...................................passed
+When User navigate to PIM section...........................................passed
+And User click on Add Employee..............................................passed
+And User enters below employee details......................................passed
+And User enable Create Login Details switch.................................passed
+And User enters below login details of employee.............................passed
+And Select status radio button..............................................passed
+And User click Save button..................................................passed
+Then User should see proper message.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add New Employee with login details" name="Add a new employee without login details" time="17.249">
+<system-out><![CDATA[
+Given User is on login page.................................................passed
+When User enters username "Admin"...........................................passed
+And User enters password "admin123".........................................passed
+And Click on Login button...................................................passed
+Then User should be on the dashboard page...................................passed
+When User navigate to PIM section...........................................passed
+And User click on Add Employee..............................................passed
+And User enters below employee details......................................passed
+And User click Save button..................................................passed
+Then User should see proper message.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add New Employee with login details" name="Add a new employee with duplicate Employee ID" time="17.851">
+<system-out><![CDATA[
+Given User is on login page.................................................passed
+When User enters username "Admin"...........................................passed
+And User enters password "admin123".........................................passed
+And Click on Login button...................................................passed
+Then User should be on the dashboard page...................................passed
+When User navigate to PIM section...........................................passed
+And User click on Add Employee..............................................passed
+And User enters below employee details......................................passed
+And User enable Create Login Details switch.................................passed
+And User enters below login details of employee.............................passed
+And Select status radio button..............................................passed
+And User click Save button..................................................passed
+Then User should see proper warning message.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Change Password Functionality" name="Change Password" time="12.17">
+<system-out><![CDATA[
+Given User redirected to login page.........................................passed
+When User enter username "Rakesh"...........................................passed
+And User enter password "Rakesh123".........................................passed
+And Clicks on Login button..................................................passed
+Then User should be redirected to the dashboard page........................passed
+When User clicks on UserProfile.............................................passed
+And User clicks on Change Password link.....................................passed
+Then User should see Update Password page...................................passed
+When User enters Current Password "Rakesh123"...............................passed
+And User enters Password "Akash123".........................................passed
+And User enters Confirm Password "Akash123".................................passed
+And User clicks on Save Button..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Edit Employee Details" name="Edit an employee's details" time="16.436">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;div data-v-7ef819fd=&quot;&quot; class=&quot;oxd-radio-wrapper&quot;&gt;...&lt;/div&gt; is not clickable at point (859, 291). Other element would receive the click: &lt;div data-v-957b4417=&quot;&quot; class=&quot;--gender-grouped-field&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=128.0.6613.120)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bb05ac12f387356ed5a136bd5df7588c, clickElement {id=f.9EE9E28EBB89F0944006306F11B6A03F.d.1BC8DFE40B03D37DC4DB1FC25855BA4B.e.136}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50301/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bb05ac12f387356ed5a136bd5df7588c)] -&gt; xpath: //div[@class='--gender-grouped-field']//div[@class=&quot;oxd-radio-wrapper&quot;]]
+Session ID: bb05ac12f387356ed5a136bd5df7588c">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div data-v-7ef819fd="" class="oxd-radio-wrapper">...</div> is not clickable at point (859, 291). Other element would receive the click: <div data-v-957b4417="" class="--gender-grouped-field">...</div>
+  (Session info: chrome=128.0.6613.120)
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bb05ac12f387356ed5a136bd5df7588c, clickElement {id=f.9EE9E28EBB89F0944006306F11B6A03F.d.1BC8DFE40B03D37DC4DB1FC25855BA4B.e.136}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50301}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50301/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bb05ac12f387356ed5a136bd5df7588c)] -> xpath: //div[@class='--gender-grouped-field']//div[@class="oxd-radio-wrapper"]]
+Session ID: bb05ac12f387356ed5a136bd5df7588c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.EditEmployeeDetailsPage.selectGender(EditEmployeeDetailsPage.java:167)
+	at stepdefinitions.EditEmployeeDetails.user_select_gender_of_employee(EditEmployeeDetails.java:88)
+	at ✽.User select Gender of employee(file:///C:/SeleniumProjects/OrangeHRMCucumber/src/test/resources/features/EditEmployeeDetails.feature:20)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User redirected to login page.........................................passed
+When User enter username "Admin"............................................passed
+And User enter password "admin123"..........................................passed
+And Clicks on Login button..................................................passed
+Then User should be redirected to the dashboard page........................passed
+When User navigate to the PIM section.......................................passed
+And User click on Employee List.............................................passed
+And User enters employeeID "786358".........................................passed
+And User click Search button................................................passed
+And User click on record cell row...........................................passed
+And User update the Last Name to "Tiwari"...................................passed
+And User update the Date Of Birth "2024-06-20" of employee..................passed
+And User select Gender of employee..........................................failed
+And User click the Save button..............................................skipped
+And User click on Job tap...................................................skipped
+Then User should see proper page............................................skipped
+And User select Joined Date "2023-09-04" from calender......................skipped
+And User select Job Category from dropdown..................................skipped
+And User click on Save button...............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Edit Employee Details" name="Delete an employee from records" time="11.886">
+<system-out><![CDATA[
+Given User redirected to login page.........................................passed
+When User enter username "Admin"............................................passed
+And User enter password "admin123"..........................................passed
+And Clicks on Login button..................................................passed
+Then User should be redirected to the dashboard page........................passed
+When User navigate to the PIM section.......................................passed
+And User click on Employee List.............................................passed
+And User enters employeeID "786358".........................................passed
+And User click Search button................................................passed
+And User click on trash icon................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Forgot Password Functionality" name="User requests a password reset request" time="11.923">
+<system-out><![CDATA[
+Given User is on the login page.............................................passed
+When User click on the Forgot your password link............................passed
+Then User should be redirected to the password reset page...................passed
+When User enters valid username "Admin".....................................passed
+And User click on the Reset Password button.................................passed
+Then User should see a confirmation message indicating that an email has been sent.passed
+]]></system-out>
+</testcase>
+<testcase classname="Forgot Password Functionality" name="User requests a password reset with an empty username address" time="7.971">
+<system-out><![CDATA[
+Given User is on the login page.............................................passed
+When User click on the Forgot your password link............................passed
+Then User should be redirected to the password reset page...................passed
+When User dont enter username...............................................passed
+And User click on the Reset Password button.................................passed
+Then User should see a proper warning message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Leave Management" name="Apply for leave" time="12.613">
+<system-out><![CDATA[
+Given User redirected to login page.........................................passed
+When User enter username "Admin"............................................passed
+And User enter password "admin123"..........................................passed
+And Clicks on Login button..................................................passed
+Then User should be redirected to the dashboard page........................passed
+When User navigate to the Leave section.....................................passed
+And User click on Apply button..............................................passed
+Then User should see Apply for leave page...................................passed
+When User select Leave Type from dropdown...................................passed
+And User enters FromDate "2024-15-08".......................................passed
+And User enters ToDate "2024-16-08".........................................passed
+And User enters comments....................................................passed
+And User click on Apply button on leave page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Leave Management" name="Cancel Leave Request" time="219.492">
+<failure type="org.openqa.selenium.NoSuchElementException" message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@class='oxd-icon-button']/child::i[@class='oxd-icon bi-three-dots-vertical']&quot;}
+  (Session info: chrome=128.0.6613.120)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c103ccfee734474edf8d77f3044d93d2, findElement {using=xpath, value=//button[@class='oxd-icon-button']/child::i[@class='oxd-icon bi-three-dots-vertical']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50385}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50385/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c103ccfee734474edf8d77f3044d93d2">
+<![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='oxd-icon-button']/child::i[@class='oxd-icon bi-three-dots-vertical']"}
+  (Session info: chrome=128.0.6613.120)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.21.0', revision: '79ed462ef4'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c103ccfee734474edf8d77f3044d93d2, findElement {using=xpath, value=//button[@class='oxd-icon-button']/child::i[@class='oxd-icon bi-three-dots-vertical']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 128.0.6613.120, chrome: {chromedriverVersion: 128.0.6613.119 (6e439cfca4d..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50385}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50385/devtoo..., se:cdpVersion: 128.0.6613.120, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c103ccfee734474edf8d77f3044d93d2
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.click(Unknown Source)
+	at pages.LeaveManagementPage.clickOnVerticalDotsOnRecordCell(LeaveManagementPage.java:164)
+	at stepdefinitions.LeaveManagement.user_click_on_three_vertical_dots_link(LeaveManagement.java:77)
+	at ✽.User click on three vertical dots link(file:///C:/SeleniumProjects/OrangeHRMCucumber/src/test/resources/features/LeaveManagement.feature:32)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User redirected to login page.........................................passed
+When User enter username "Admin"............................................passed
+And User enter password "admin123"..........................................passed
+And Clicks on Login button..................................................passed
+Then User should be redirected to the dashboard page........................passed
+When User navigate to the Leave section.....................................passed
+And User click on LeaveList button..........................................passed
+Then User should see LeaveList page.........................................passed
+And User enters FromDate "2024-15-08".......................................passed
+And User enters ToDate "2024-16-08".........................................passed
+And User select Leave Type from dropdrop....................................passed
+And User click on Search button on leaveList page...........................passed
+And User click on three vertical dots link..................................failed
+And User click on Cancel button link........................................skipped
+Then User should see No Record Found........................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="User logs in with valid credentials - #1.1" time="7.541">
+<system-out><![CDATA[
+Given user is on the login page.............................................passed
+When user enters valid username Admin.......................................passed
+And user enters valid password admin123.....................................passed
+And user clicks the login button............................................passed
+Then user should be redirected to the dashboard.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="User logs in with valid credentials - #1.2" time="6.497">
+<system-out><![CDATA[
+Given user is on the login page.............................................passed
+When user enters valid username Rahul.......................................passed
+And user enters valid password Rahul123.....................................passed
+And user clicks the login button............................................passed
+Then user should be redirected to the dashboard.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="User logs in with both invalid username and password" time="7.448">
+<system-out><![CDATA[
+Given user is on the login page.............................................passed
+When user enters invalid username "Adm456"..................................passed
+And user enters invalid password "adm789"...................................passed
+And user clicks the login button............................................passed
+Then User should get a proper warning message...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality" name="User attempts to log in with empty username and password" time="7.855">
+<system-out><![CDATA[
+Given user is on the login page.............................................passed
+When user leaves both the username and password fields empty................passed
+And user clicks the login button............................................passed
+Then an error message should be displayed indicating Username and Password are required.passed
+]]></system-out>
+</testcase>
+<testcase classname="Logout Functionality" name="User logs out successfully" time="9.827">
+<system-out><![CDATA[
+When User enters details into below fields..................................passed
+And user click the login button.............................................passed
+Then user should redirected to the dashboard................................passed
+When user clicks on the profile icon........................................passed
+And user clicks on the Logout button........................................passed
+Then user should redirected to the login page...............................passed
+]]></system-out>
+</testcase>
+</testsuite>
